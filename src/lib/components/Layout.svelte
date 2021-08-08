@@ -1,0 +1,16 @@
+<script lang="ts">
+  import Header from "./Header.svelte";
+  import Footer from "./Footer.svelte";
+</script>
+
+<Header />
+<main><slot /></main>
+<Footer />
+
+<style>
+  main {
+    margin: 0 auto;
+    width: min(65ch, 100%);
+    padding-top: 1rem;
+  }
+</style>
