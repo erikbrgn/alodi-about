@@ -18,9 +18,7 @@
 
 <header bind:this={headerElement} class:sticky>
 	<Logo {sticky} />
-	<Link url="https://alodi.app" arrow={true} className="link-continue" {sticky}
-		>Continue to Alodi
-	</Link>
+	<Link url="https://alodi.app" arrow={true} className="link-continue" {sticky}>Continue</Link>
 </header>
 
 <style>
