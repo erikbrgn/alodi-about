@@ -58,7 +58,7 @@
 	/>
 	<Heading>Changelog</Heading>
 	<Paragraph left>
-		Take a look at recent changes to Alodi or visit our <a href="/blog">blog</a>
+		Take a look at recent changes to Alodi or visit our <a href="#">blog</a>
 		to read more about them in detail.
 	</Paragraph>
 	<Changelog items={releases} />
