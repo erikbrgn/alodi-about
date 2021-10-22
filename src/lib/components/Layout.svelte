@@ -13,4 +13,10 @@
 		width: min(65ch, 100%);
 		padding-top: 1rem;
 	}
+
+	@media (min-width: 135ch) {
+		main {
+			width: min(100ch, 100%);
+		}
+	}
 </style>
