@@ -1,10 +1,15 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	// see https://kit.svelte.dev/docs#loading
-	export const load: Load = async ({ page, fetch, session, context }) => {
-		const releases = await fetch('/index.json').then((res) => res.json());
+	export const load: Load = async ({ params, fetch, session, url }) => {
+		const response = await fetch('/data', {
+			method: 'GET',
+			headers: { Accept: 'application/json' }
+		});
+
 		return {
-			props: { ...releases }
+			status: response.status,
+			props: response.ok && (await response.json())
 		};
 	};
 </script>
@@ -58,7 +63,8 @@
 	/>
 	<Heading>Changelog</Heading>
 	<Paragraph left>
-		Take a look at recent changes to Alodi or visit our <a href="#">blog</a>
+		<!-- svelte-ignore a11y-invalid-attribute -->
+		Take a look at recent changes to Alodi or visit our <a href="">blog</a>
 		to read more about them in detail.
 	</Paragraph>
 	<Changelog items={releases} />
