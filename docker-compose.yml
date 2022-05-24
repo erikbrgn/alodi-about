@@ -6,7 +6,6 @@ services:
       context: .
     container_name: about-alodi
     labels:
-      - 'log.level=DEBUG'
       - 'traefik.enable=true'
       - 'traefik.http.routers.about-alodi.entrypoints=websecure'
       - 'traefik.http.routers.about-alodi.rule=Host(`${DOMAIN}`)'
